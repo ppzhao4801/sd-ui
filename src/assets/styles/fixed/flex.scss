@@ -1,0 +1,57 @@
+.f-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.f-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.f-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.f-col-center {
+  align-items: center;
+}
+
+.f-col-top {
+  align-items: flex-start;
+}
+
+.f-col-bottom {
+  align-items: flex-end;
+}
+
+.f-row-center {
+  justify-content: center;
+}
+
+.f-row-left {
+  justify-content: flex-start;
+}
+
+.f-row-right {
+  justify-content: flex-end;
+}
+
+.f-row-between {
+  justify-content: space-between;
+}
+
+.f-row-around {
+  justify-content: space-around;
+}
+
+.f-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// 定义flex等分
+@for $i from 0 through 12 {
+  .f-flex-#{$i} {
+    flex: $i;
+  }
+}

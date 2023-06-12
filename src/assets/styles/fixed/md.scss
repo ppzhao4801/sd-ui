@@ -1,0 +1,38 @@
+.md-content{
+  .hljs{
+    background: #f0f1f2 ;
+    padding: 10px;
+  }
+  table td{
+    padding: 5px 0;
+  }
+  table{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing:0;
+    white-space: nowrap;
+    text-align: left;
+    border-top:1px solid #dfe2e5;
+    border-left:1px solid #dfe2e5;
+  }
+   table th,table tr,table td{
+    border-bottom:1px solid #dfe2e5;
+    border-right:1px solid #dfe2e5;
+    padding: 5px 10px;
+  }
+  tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+  img{
+    max-width: 100%;
+  }
+  .language-json pre{
+    white-space: pre-wrap;
+    .hljs-string{
+      word-break: break-all;
+    }
+  }
+
+}
