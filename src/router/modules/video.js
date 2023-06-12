@@ -9,4 +9,10 @@ export default [
     component: _import("video/list"),
     meta: { ...meta, title: "视频列表" },
   },
+  {
+    path: "/video/play/list",
+    name: "VideoPlayList",
+    component: _import("video/playList"),
+    meta: { ...meta, title: "视频播放列表" },
+  },
 ];

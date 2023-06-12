@@ -7,6 +7,9 @@
 // 注意 这个文件里只写class
 @import './common/flex.scss';
 
+.global-background{
+  background-color: #f5f8fa;
+}
 // 文字相关
 .#{$prefix}-text-center {
   text-align: center;
