@@ -13,8 +13,6 @@
         <slot :item="item">
           <div class="coll">
             <div class="item"><i></i><span class="dzs">151493</span></div>
-            <div class="item"><i></i><span class="dzs">151493</span></div>
-            <div class="item"><i></i>17482</div>
           </div>
         </slot>
       </dd>
