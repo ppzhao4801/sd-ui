@@ -28,6 +28,12 @@ const frameIn = { path: "/", redirect: "/index", name: "Index", component: Layou
 const routes = [
   frameIn,
   {
+    path: "/video/play/detail",
+    name: "VideoPlayDetail",
+    component: _import("video/detail"),
+    meta: { title: "视频播放详情" },
+  },
+  {
     path: "*",
     name: "Error404",
     component: _import("common/error/404"),
