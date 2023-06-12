@@ -1,23 +1,24 @@
 <template>
   <div class="app-breadcrumb f-flex f-col-center">
     <div class="pre">当前位置：</div>
-    <yxb-breadcrumb separator=">">
+    <el-breadcrumb separator=">">
       <transition-group name="breadcrumb">
         <template v-for="(item, index) in levelList">
-          <yxb-breadcrumb-item v-if="item.meta.title" :key="item.path">
+          <el-breadcrumb-item v-if="item.meta.title" :key="item.path">
             <span v-if="index == levelList.length - 1" class="no-redirect">
               {{ item.meta.title }}
             </span>
             <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
-          </yxb-breadcrumb-item>
+          </el-breadcrumb-item>
         </template>
       </transition-group>
-    </yxb-breadcrumb>
+    </el-breadcrumb>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Breadcrumb",
   data() {
     return {
       levelList: null,

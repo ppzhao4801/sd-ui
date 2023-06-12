@@ -1,8 +1,6 @@
-@import '@/assets/styles/unit/color.scss';
-
 // 工具类名统一前缀
-$prefix: yxb;
-$baseUrl: 'http://oapidev.foton.happysalers.com/';
+$prefix: zpp;
+$baseUrl: '/';
 // 禁止用户选中 鼠标变为手形
 %unable-select {
   user-select: none;

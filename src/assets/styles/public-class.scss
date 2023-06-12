@@ -2,13 +2,10 @@
 // 动画
 @import './animate/vue-transition.scss';
 // 补丁 base
-@import './fixed/base.scss';
-@import './fixed/flex.scss';
-@import './fixed/md.scss';
-@import './fixed/element.scss';
+@import './base.scss';
 // 在这里写公用的class
 // 注意 这个文件里只写class
-// mixin等内容请在 public.scss 里书写
+@import './flex.scss';
 
 // 文字相关
 .#{$prefix}-text-center {
