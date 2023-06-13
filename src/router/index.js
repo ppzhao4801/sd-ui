@@ -4,6 +4,7 @@ import store from "@/store";
 
 import common from "./modules/common";
 import video from "./modules/video";
+import audio from "./modules/audio";
 import news from "./modules/news";
 import Layout from "@/layout";
 import util from "@/libs/util.js";
@@ -29,7 +30,7 @@ const frameIn = {
   redirect: "/index",
   name: "Index",
   component: Layout,
-  children: [...common, ...video, ...news],
+  children: [...common, ...video, ...audio, ...news],
 };
 
 const routes = [
