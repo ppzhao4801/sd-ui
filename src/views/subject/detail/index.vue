@@ -41,12 +41,24 @@
         <el-tab-pane label="期刊" name="first">
           <div class="resource-list">
             <ul>
-              <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
+              <li>
+                <a target="_blank">党史文化的当代价值党史文化的当代价值及其建设发展路径探讨及其建设发展路径探讨</a>
+              </li>
               <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
               <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
               <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
               <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
             </ul>
+            <div style="text-align: right; margin-top: 10px">
+              <el-pagination
+                :current-page="1"
+                :page-sizes="[100, 200, 300, 400]"
+                :page-size="100"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="400"
+              >
+              </el-pagination>
+            </div>
           </div>
         </el-tab-pane>
         <el-tab-pane label="图书" name="second">
@@ -58,19 +70,19 @@
               <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
               <li><a target="_blank">党史文化的当代价值及其建设发展路径探讨</a></li>
             </ul>
+            <div style="text-align: right; margin-top: 10px">
+              <el-pagination
+                :current-page="1"
+                :page-sizes="[100, 200, 300, 400]"
+                :page-size="100"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="400"
+              >
+              </el-pagination>
+            </div>
           </div>
         </el-tab-pane>
       </el-tabs>
-      <div style="text-align: right; margin-top: 10px">
-        <el-pagination
-          :current-page="1"
-          :page-sizes="[100, 200, 300, 400]"
-          :page-size="100"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="400"
-        >
-        </el-pagination>
-      </div>
     </div>
   </div>
 </template>
@@ -98,12 +110,21 @@ export default {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     .resource-list {
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-items: center;
+      }
       li {
-        float: left;
+        margin: 0 10px;
         width: 410px;
         height: 48px;
         line-height: 47px;
         border-bottom: 1px dashed #ccc;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; /* 添加省略号 */
         &:before {
           display: inline-block;
           width: 2px;
@@ -112,9 +133,6 @@ export default {
           background-color: #333;
           vertical-align: middle;
           content: "";
-        }
-        &:nth-child(even) {
-          float: right;
         }
       }
     }
