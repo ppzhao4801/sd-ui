@@ -27,7 +27,7 @@ export default {
       { controls: true, autoplay: true, muted: true, type: "video/mp4" },
       function () {
         console.log("Video.js is ready");
-        this.src("https://video.699pic.com/videos/35/40/13/a_HBWjnCCC87vs16813540130187.mp4");
+        this.src("https://img.tukuppt.com/video_show/15653652/01/00/67/6117b79d71fa8.mp4");
       }
     );
   },
