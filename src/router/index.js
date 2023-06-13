@@ -7,6 +7,8 @@ import video from "./modules/video";
 import audio from "./modules/audio";
 import news from "./modules/news";
 import paper from "./modules/paper";
+import resource from "./modules/resource";
+
 import Layout from "@/layout";
 import util from "@/libs/util.js";
 // 进度条
@@ -31,7 +33,7 @@ const frameIn = {
   redirect: "/index",
   name: "Index",
   component: Layout,
-  children: [...common, ...video, ...audio, ...news, ...paper],
+  children: [...common, ...video, ...audio, ...news, ...paper, ...resource],
 };
 
 const routes = [
