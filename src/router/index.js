@@ -4,6 +4,7 @@ import store from "@/store";
 
 import common from "./modules/common";
 import video from "./modules/video";
+import news from "./modules/news";
 import Layout from "@/layout";
 import util from "@/libs/util.js";
 // 进度条
@@ -23,7 +24,13 @@ const _import = require("@/libs/util.import." + process.env.NODE_ENV);
 /**
  * 在主框架内显示
  */
-const frameIn = { path: "/", redirect: "/index", name: "Index", component: Layout, children: [...common, ...video] };
+const frameIn = {
+  path: "/",
+  redirect: "/index",
+  name: "Index",
+  component: Layout,
+  children: [...common, ...video, ...news],
+};
 
 const routes = [
   frameIn,
