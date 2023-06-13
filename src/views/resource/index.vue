@@ -26,6 +26,16 @@
                 2014年10月第1版；2018年1月第2版习近平讲话学习参考资料中国特色社会主义社会主义建设模式学习参考资料
                 思想理论 2014年10月第1版；2018年1月第2版
               </div>
+              <div class="source">
+                <a class="collectLink">
+                  <i class="icon-favorite"></i>
+                  <span class="cLinkTS9787119111667">收藏</span>
+                </a>
+                <a class="collectLink">
+                  <i class="icon-favorite"></i>
+                  <span class="cLinkTS9787119111667">收藏</span>
+                </a>
+              </div>
             </div>
           </li>
           <li class="item">
@@ -167,6 +177,27 @@ export default {
         }
         .remark {
           color: #999999;
+        }
+        .source {
+          margin-top: 15px;
+          padding-left: 0;
+          a {
+            position: relative;
+            display: inline-block;
+            height: 25px;
+            margin-right: 10px;
+            padding: 0 10px;
+            line-height: 25px;
+            text-decoration: none;
+            color: #545454;
+            background: #ededf1;
+            border-radius: 3px;
+            border: 1px solid #ededf1;
+            transition: all 0.3s;
+            i {
+              margin-right: 4px;
+            }
+          }
         }
       }
     }

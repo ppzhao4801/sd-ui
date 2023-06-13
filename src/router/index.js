@@ -8,6 +8,7 @@ import audio from "./modules/audio";
 import news from "./modules/news";
 import paper from "./modules/paper";
 import resource from "./modules/resource";
+import subject from "./modules/subject";
 
 import Layout from "@/layout";
 import util from "@/libs/util.js";
@@ -33,7 +34,7 @@ const frameIn = {
   redirect: "/index",
   name: "Index",
   component: Layout,
-  children: [...common, ...video, ...audio, ...news, ...paper, ...resource],
+  children: [...common, ...video, ...audio, ...news, ...paper, ...resource, ...subject],
 };
 
 const routes = [
