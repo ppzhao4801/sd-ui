@@ -35,7 +35,7 @@ export default {
   background: #ca0b0b url(./images/body-bg.jpg) no-repeat center top;
   &-content {
     background-color: #f5f8fa;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 }
 </style>
