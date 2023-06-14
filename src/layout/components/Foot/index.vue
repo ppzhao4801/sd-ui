@@ -98,59 +98,48 @@ export default {
       padding-bottom: 15px;
       margin-bottom: 10px;
     }
+    .er li {
+      width: 50%;
+      float: left;
+    }
     ul {
       overflow: hidden;
+      li {
+        margin-top: 15px;
+        a {
+          display: block;
+          overflow: hidden;
+          position: relative;
+          color: #7c96c2;
+          padding-left: 20px;
+          &:before {
+            display: block;
+            content: "\f105";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #7c96c2;
+            font-size: 16px;
+          }
+          &:hover:before {
+            border-color: #3a83e0;
+          }
+        }
+      }
     }
   }
-}
-.footer .nav ul {
-  overflow: hidden;
-}
-
-.footer .nav ul li {
-  margin-top: 15px;
-}
-
-.footer .nav ul li a {
-  display: block;
-  overflow: hidden;
-  position: relative;
-  color: #7c96c2;
-  padding-left: 20px;
-}
-
-.footer .nav ul li a:before {
-  display: block;
-  content: "\f105";
-  font-family: FontAwesome;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #7c96c2;
-  font-size: 16px;
-}
-
-.footer .nav ul li a:hover:before {
-  border-color: #3a83e0;
-}
-
-.footer .nav .er li {
-  width: 50%;
-  float: left;
-}
-
-.footer .copy {
-  background-color: #303b4c;
-  color: #94a5bf;
-  padding: 20px 0;
-}
-
-.footer .copy a {
-  color: #94a5bf;
-}
-
-.footer .copy a:hover {
-  color: #3a83e0;
+  .copy {
+    background-color: #303b4c;
+    color: #94a5bf;
+    padding: 20px 0;
+    a {
+      color: #94a5bf;
+      &:hover {
+        color: #3a83e0;
+      }
+    }
+  }
 }
 </style>
