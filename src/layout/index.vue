@@ -3,9 +3,6 @@
     <div class="layout-head">
       <Heads />
     </div>
-    <div class="layout-navbar">
-      <Navbar />
-    </div>
     <div class="layout-content">
       <router-view />
     </div>
@@ -14,11 +11,10 @@
 </template>
 
 <script>
-import { Navbar, Foot, Heads } from "./components";
+import { Foot, Heads } from "./components";
 export default {
   name: "Layout",
   components: {
-    Navbar,
     Foot,
     Heads,
   },
@@ -32,10 +28,8 @@ export default {
 </script>
 
 <style lang="scss">
-// @import "@/assets/styles/layout/index.scss";
-// // 注册主题
-// @import "@/assets/styles/theme/register.scss";
-.layout-content {
-  min-height: 600px;
+.layout {
+  position: relative;
+  background: #ca0b0b url(./images/body-bg.jpg) no-repeat center top;
 }
 </style>
