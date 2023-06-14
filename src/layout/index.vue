@@ -6,7 +6,9 @@
     <div class="layout-content">
       <router-view />
     </div>
-    <div class="layout-foot"><Foot /></div>
+    <div class="layout-foot">
+      <Foot />
+    </div>
   </div>
 </template>
 
