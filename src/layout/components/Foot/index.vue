@@ -2,11 +2,11 @@
   <div class="footer">
     <div class="container">
       <div class="content">
-        <div class="logo"><img src="img/logo.png" /></div>
+        <div class="logo"><img src="../../images/logo.png" /></div>
         <ul>
-          <li><i class="fa fa-phone"></i>010-84883678</li>
-          <li><i class="fa fa-envelope"></i>136983991@qq.com</li>
-          <li><i class="fa fa-map-marker"></i>北京市东城区朝阳门内南小街51号</li>
+          <li><i class="fa el-icon-phone-outline"></i>010-84883678</li>
+          <li><i class="fa el-icon-message"></i>136983991@qq.com</li>
+          <li><i class="fa el-icon-map-location"></i>北京市东城区朝阳门内南小街51号</li>
         </ul>
       </div>
       <div class="nav">
@@ -52,14 +52,14 @@ export default {
   margin: 0 auto;
 }
 .footer {
-  background-color: #3c495e;
+  background-color: #a30005; //底部背景颜色
   font-size: 12px;
   & > .container {
     padding: 50px 0;
     overflow: hidden;
   }
   .content {
-    color: #abb0ba;
+    color: #fafafa;
     float: left;
     .logo img {
       height: 54px;
@@ -78,7 +78,7 @@ export default {
           margin-top: 0;
         }
         .fa {
-          color: #5297e3;
+          color: #fafafa;
           position: absolute;
           left: 0;
           top: 50%;
@@ -93,8 +93,8 @@ export default {
     float: right;
     .tit {
       font-size: 18px;
-      color: #fff;
-      border-bottom: 1px solid #50617d;
+      color: #fafafa;
+      border-bottom: 1px solid #fafafa;
       padding-bottom: 15px;
       margin-bottom: 10px;
     }
@@ -110,34 +110,35 @@ export default {
           display: block;
           overflow: hidden;
           position: relative;
-          color: #7c96c2;
+          color: #fafafa;
           padding-left: 20px;
           &:before {
             display: block;
-            content: "\f105";
-            font-family: FontAwesome;
+            content: "\e6e0";
+            font-family: element-icons;
             position: absolute;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            color: #7c96c2;
+            color: #fafafa;
             font-size: 16px;
           }
           &:hover:before {
-            border-color: #3a83e0;
+            border-color: #fafafa;
           }
         }
       }
     }
   }
   .copy {
-    background-color: #303b4c;
-    color: #94a5bf;
+    background-color: #7d0008; //下面版权背景
+    color: #fafafa;
     padding: 20px 0;
     a {
-      color: #94a5bf;
+      color: #fafafa;
       &:hover {
-        color: #3a83e0;
+        //color: #3a83e0;
+        text-decoration: underline;
       }
     }
   }
