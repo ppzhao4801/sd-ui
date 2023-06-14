@@ -1,5 +1,5 @@
 <template>
-  <div class="global-background video-play-list">
+  <div class="global-background video-play-list l-width">
     <div class="section f-flex f-col-top">
       <div class="section-left">
         <div
@@ -334,8 +334,6 @@ export default {
   }
 }
 .section-main {
-  width: 1200px;
-  margin: 20px auto;
   display: flex;
   justify-content: space-between;
   .detail {
