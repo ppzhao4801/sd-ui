@@ -9,6 +9,7 @@ import news from "./modules/news";
 import paper from "./modules/paper";
 import resource from "./modules/resource";
 import subject from "./modules/subject";
+import book from "./modules/book";
 
 import Layout from "@/layout";
 import util from "@/libs/util.js";
@@ -34,7 +35,7 @@ const frameIn = {
   redirect: "/index",
   name: "Index",
   component: Layout,
-  children: [...common, ...video, ...audio, ...news, ...paper, ...resource, ...subject],
+  children: [...common, ...video, ...audio, ...news, ...paper, ...resource, ...subject, ...book],
 };
 
 const routes = [

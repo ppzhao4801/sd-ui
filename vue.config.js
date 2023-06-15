@@ -1,5 +1,6 @@
 const { defineConfig } = require("@vue/cli-service");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
+const webpack = require("webpack");
 const { set, compact, map } = require("lodash");
 const externals = {};
 const { name } = require("./package");
@@ -133,5 +134,11 @@ module.exports = defineConfig({
       set(options, "[0].cdn", process.env.NODE_ENV === "production" ? setting : []);
       return options;
     });
+    config.plugin("provide").use(webpack.ProvidePlugin, [
+      {
+        $: "jquery",
+        jQuery: "jquery",
+      },
+    ]);
   },
 });
