@@ -1,7 +1,7 @@
 <template>
   <div class="news-list f-flex f-row-center f-col-top">
-    <div style="width: 240px">
-      <ul class="ztree" ref="ztreeContainer"></ul>
+    <div style="width: 240px; text-align: left">
+      <ul id="bookList" class="ztree" ref="ztreeContainer"></ul>
     </div>
     <div>
       <div style="text-align: right">
@@ -43,8 +43,22 @@ export default {
         },
         callback: {
           // 这里是ZTree的回调函数
+          beforeCheck: (id, node) => {
+            console.log(id, node);
+            debugger;
+          },
+          onCheck: (event, treeId, treeNode) => {
+            console.log(event, treeId, treeNode);
+            console.log(this);
+            debugger;
+            // eslint-disable-next-line no-undef
+            var treeObj = $.fn.zTree.getZTreeObj("bookList");
+            debugger;
+            const a = treeObj.getCheckedNodes(true);
+            console.log(a);
+            debugger;
+          },
         },
-        // 这里是其他的配置选项
       },
     };
   },
@@ -55,7 +69,14 @@ export default {
     initZTree() {
       const zTreeData = [
         // 这里是你的ZTree数据
-        { id: "1", name: "父节点1", children: [{ name: "子节点1" }, { name: "子节点2" }] },
+        {
+          id: "id1",
+          name: "父节点1",
+          children: [
+            { id: "id2", name: "子节点1" },
+            { id: "id3", name: "子节点2" },
+          ],
+        },
       ];
 
       // 初始化ZTree
