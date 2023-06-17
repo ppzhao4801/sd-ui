@@ -2,7 +2,7 @@
   <div class="box-list">
     <dl v-for="(item, index) in data" class="box-list_item" :key="index" @click="toDetail">
       <dd class="item-pic">
-        <img :src="item.pic" />
+        <img :src="item.pic" :style="imgStyle" />
       </dd>
       <dt class="item-title">
         <a>{{ item.title }}</a>
@@ -10,11 +10,9 @@
       <dd class="item-explain">
         <div v-if="isMark" class="item-mark"></div>
         <slot name="mark" :item="item"></slot>
-        <slot :item="item">
-          <div class="coll">
-            <div class="item"><i></i><span class="dzs">151493</span></div>
-          </div>
-        </slot>
+        <div v-if="$slots.foot || $scopedSlots.foot" class="coll">
+          <slot name="foot" :item="item"> </slot>
+        </div>
       </dd>
     </dl>
   </div>
@@ -44,6 +42,10 @@ export default {
       default: false,
     },
   },
+  created() {
+    console.log(this);
+    debugger;
+  },
   methods: {
     toDetail() {
       this.$emit("detail");
@@ -59,19 +61,20 @@ export default {
   flex-wrap: wrap;
 
   &_item {
+    background-color: #fff;
     position: relative;
     overflow: hidden;
     margin: 0px 10px 26px;
-    width: 240px;
+    width: 220px;
     height: auto;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     .item-pic,
     .item-mark {
-      height: 400px;
+      height: 300px;
       img {
-        height: 400px;
+        height: 300px;
       }
     }
     //图片
@@ -111,7 +114,6 @@ export default {
         border-top: 1px solid #eceff1;
         color: #838383;
         font-size: 14px;
-        font-family: Arial;
         margin: 5px 0;
         div.item {
           margin: 5px 0;

@@ -3,8 +3,13 @@
     <div class="collapse">
       <Collapse></Collapse>
     </div>
-    <div style="width: 1040px; text-align: right">
-      <BoxList :data="list"></BoxList>
+    <div class="content-wrap">
+      <BoxList :data="list">
+        <template #foot="{ item }">
+          <div class="item"><i></i><span class="dzs">收集日期：1933~2023</span></div>
+          <div class="item" @click="store(item)"><i></i><span class="dzs">收藏</span></div>
+        </template>
+      </BoxList>
       <el-pagination
         :current-page="1"
         :page-sizes="[100, 200, 300, 400]"
@@ -49,7 +54,9 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    store() {},
+  },
 };
 </script>
 
@@ -57,6 +64,9 @@ export default {
 .paper-list {
   .collapse {
     flex: 1 1 240px;
+  }
+  .content-wrap {
+    width: 960px;
   }
 }
 </style>
