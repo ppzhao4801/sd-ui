@@ -1,7 +1,13 @@
 <template>
   <div class="book-list f-flex f-row-between f-col-top l-width">
-    <div class="book">
-      <ul id="bookList" class="ztree" ref="ztreeContainer"></ul>
+    <div class="book-list-tree">
+      <h2 class="title">
+        <span>资源类型</span>
+        <i class="el-icon-arrow-down zpp-collapse-item_icon"></i>
+      </h2>
+      <!-- <ul id="bookList" class="ztree" ref="ztreeContainer"></ul> -->
+      <el-tree :data="treeData" show-checkbox default-expand-all node-key="id" ref="tree" highlight-current> </el-tree>
+      <div class="more"><i class="el-icon-arrow-down zpp-collapse-item_icon"></i></div>
     </div>
     <div class="f-flex-1">
       <div>
@@ -77,6 +83,24 @@ export default {
   data() {
     return {
       list: [],
+      treeData: [
+        {
+          id: "id1",
+          label: "父节点1",
+          children: [
+            { id: "id1-1", label: "子节点1" },
+            { id: "id2-1", label: "子节点2" },
+          ],
+        },
+        {
+          id: "id2",
+          label: "父节点2",
+          children: [
+            { id: "id2-1", label: "子节点1" },
+            { id: "id2-2", label: "子节点2" },
+          ],
+        },
+      ],
       ztreeSetting: {
         treeId: "bookList",
         treeObj: null,
@@ -113,13 +137,20 @@ export default {
   methods: {
     initZTree() {
       const zTreeData = [
-        // 这里是你的ZTree数据
         {
           id: "id1",
           name: "父节点1",
           children: [
-            { id: "id2", name: "子节点1" },
-            { id: "id3", name: "子节点2" },
+            { id: "id1-1", name: "子节点1" },
+            { id: "id2-1", name: "子节点2" },
+          ],
+        },
+        {
+          id: "id2",
+          name: "父节点2",
+          children: [
+            { id: "id2-1", name: "子节点1" },
+            { id: "id2-2", name: "子节点2" },
           ],
         },
       ];
@@ -133,15 +164,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.book {
-  height: 100%;
-  background-color: #fff;
-  border-radius: 5px;
-  border: 1px solid #ebeef5;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 300px;
-}
 .book-list {
+  &-tree {
+    padding: 10px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ebeef5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      color: #424242;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .more {
+      height: 20px;
+      text-align: center;
+      background-color: #e8ecf1;
+      border-radius: 3px;
+      line-height: 20px;
+      font-size: 14px;
+    }
+  }
   .search-result-list {
     margin-left: 20px;
     li.item {
