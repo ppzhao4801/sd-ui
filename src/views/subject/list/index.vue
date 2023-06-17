@@ -1,5 +1,5 @@
 <template>
-  <div class="subject-list">
+  <div class="subject-list l-width">
     <ul class="result-list">
       <li>
         <div class="item">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <div class="view">
+        <div class="view" @click="toDetail">
           <a>查看</a>
         </div>
       </li>
@@ -89,13 +89,16 @@ export default {
       list: [],
     };
   },
-  methods: {},
+  methods: {
+    toDetail() {
+      this.$router.push({ path: "/subject/detail" });
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .subject-list {
-  margin: 0 30px;
   .result-list {
     li {
       position: relative;

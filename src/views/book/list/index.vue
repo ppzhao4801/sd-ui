@@ -1,5 +1,5 @@
 <template>
-  <div class="book-list f-flex f-row-center f-col-top">
+  <div class="book-list f-flex f-row-center f-col-top l-width">
     <div class="book" style="width: 240px">
       <ul id="bookList" class="ztree" ref="ztreeContainer"></ul>
     </div>
@@ -176,7 +176,6 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .book-list {
-  margin: 0 30px;
   .search-result-list {
     margin-left: 20px;
     li.item {

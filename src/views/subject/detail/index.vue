@@ -1,5 +1,5 @@
 <template>
-  <div class="subject-detail">
+  <div class="subject-detail l-width">
     <ul class="result-list">
       <li>
         <div class="item">
@@ -100,7 +100,6 @@ export default {
 
 <style lang="scss" scoped>
 .subject-detail {
-  margin: 0 30px;
   .detail {
     padding: 20px 30px;
     margin-bottom: 15px;
@@ -118,7 +117,7 @@ export default {
       }
       li {
         margin: 0 10px;
-        width: 410px;
+        width: 360px;
         height: 48px;
         line-height: 47px;
         border-bottom: 1px dashed #ccc;
