@@ -3,7 +3,7 @@
     <div class="collapse">
       <Collapse></Collapse>
     </div>
-    <div>
+    <div class="content-wrap">
       <div>
         <ul class="content-list">
           <li class="content-list_item" @click="toDetail">
@@ -83,15 +83,18 @@ export default {
 <style lang="scss" scoped>
 .news-list {
   .collapse {
-    flex: 1 1 250px;
+    flex: 1 1 240px;
+  }
+  .content-wrap {
+    width: 960px;
   }
   .content-list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     &_item {
-      width: 230px;
-      height: 330px;
+      width: 220px;
+      height: 300px;
       position: relative;
       overflow: hidden;
       margin: 0px 10px 20px;
@@ -122,7 +125,7 @@ export default {
           display: block;
           text-indent: 2em;
           display: -webkit-box; /* 旧版本的Webkit内核浏览器需要这个属性 */
-          -webkit-line-clamp: 10; /* 控制显示的行数 */
+          -webkit-line-clamp: 8; /* 控制显示的行数 */
           -webkit-box-orient: vertical; /* 垂直排列 */
           overflow: hidden; /* 隐藏超出容器的内容 */
           text-overflow: ellipsis; /* 添加省略号 */
