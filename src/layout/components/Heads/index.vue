@@ -20,8 +20,9 @@
         <router-link to="/book/list">图书库</router-link>
         <router-link to="/news/list">新闻库</router-link>
         <router-link to="/paper/list">报刊库</router-link>
-        <router-link to="/subject/list">专题库</router-link>
-        <router-link to="/audio/list">音频库</router-link>
+        <router-link to="/fodder/list">素材库</router-link>
+        <!-- <router-link to="/subject/list">专题库</router-link>
+        <router-link to="/audio/list">音频库</router-link> -->
         <router-link to="/video/list">视频库</router-link>
       </li>
     </ul>
