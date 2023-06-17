@@ -6,10 +6,10 @@
     <div class="content-wrap">
       <div>
         <ul class="content-list">
-          <li class="content-list_item" @click="toDetail">
+          <li class="content-list_item">
             <div class="item-wrap">
               <i>2023.05.31</i>
-              <span class="title">
+              <span class="title" @click="toDetail">
                 习近平：中国式现代化习近平：中国式现代化是中国共产党领导的社习近平：中国式现代化是中国共产党领导的社是中国共产党领导的社
               </span>
               <span class="content">
@@ -118,6 +118,7 @@ export default {
           -webkit-box-orient: vertical; /* 垂直排列 */
           overflow: hidden; /* 隐藏超出容器的内容 */
           text-overflow: ellipsis; /* 添加省略号 */
+          cursor: pointer;
         }
         .content {
           font-size: 14px;
