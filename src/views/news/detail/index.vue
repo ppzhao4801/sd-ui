@@ -1,5 +1,5 @@
 <template>
-  <div class="news-detail">
+  <div class="news-detail l-width">
     <h2 class="title">习近平：中国式现代化是中国共产党领导的社会主义现代化</h2>
     <div class="content">
       <div class="source">
@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss" scoped>
 .news-detail {
-  margin: 0 30px;
   .title {
     color: #333;
     line-height: 46px;
@@ -63,6 +62,11 @@ export default {
       span {
         padding-right: 30px;
       }
+    }
+    p {
+      margin-bottom: 10px;
+      text-indent: 2em;
+      line-height: 1.5em;
     }
   }
   .foot {

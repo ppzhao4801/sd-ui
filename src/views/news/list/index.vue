@@ -1,12 +1,12 @@
 <template>
-  <div class="news-list f-flex f-row-center f-col-top">
-    <div style="width: 240px">
+  <div class="news-list f-flex f-row-center f-col-top l-width">
+    <div class="collapse">
       <Collapse></Collapse>
     </div>
     <div>
       <div>
         <ul class="content-list">
-          <li class="content-list_item">
+          <li class="content-list_item" @click="toDetail">
             <div class="item-wrap">
               <i>2023.05.31</i>
               <span class="title">
@@ -72,20 +72,25 @@ export default {
       list: [],
     };
   },
-  methods: {},
+  methods: {
+    toDetail() {
+      this.$router.push({ path: "/news/detail" });
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .news-list {
-  margin: 0 30px;
+  .collapse {
+    flex: 1 1 250px;
+  }
   .content-list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 1040px;
     &_item {
-      width: 240px;
+      width: 230px;
       height: 330px;
       position: relative;
       overflow: hidden;
