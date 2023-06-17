@@ -4,7 +4,7 @@
       <Collapse></Collapse>
     </div>
     <div style="width: 1040px; text-align: right">
-      <BoxList :data="list"></BoxList>
+      <BoxList :data="list" @detail="toDetail"></BoxList>
       <el-pagination
         :current-page="1"
         :page-sizes="[100, 200, 300, 400]"
@@ -49,7 +49,11 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    toDetail() {
+      this.$router.push({ path: "/audio/play/list" });
+    },
+  },
 };
 </script>
 
