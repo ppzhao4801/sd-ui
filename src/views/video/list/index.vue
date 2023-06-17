@@ -1,10 +1,10 @@
 <template>
-  <div class="VideoList f-flex f-row-center f-col-top">
-    <div style="width: 240px">
+  <div class="VideoList f-flex f-row-center f-col-top l-width">
+    <div class="collapse">
       <Collapse></Collapse>
     </div>
     <div style="width: 1040px; text-align: right">
-      <BoxList :data="list"></BoxList>
+      <BoxList :data="list" @detail="toDetail"></BoxList>
       <el-pagination
         :current-page="1"
         :page-sizes="[100, 200, 300, 400]"
@@ -49,12 +49,18 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    toDetail() {
+      this.$router.push({ path: "/video/play/list" });
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .VideoList {
-  margin: 0 30px;
+  .collapse {
+    flex: 1 1 240px;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="box-list">
-    <dl v-for="(item, index) in data" class="box-list_item" :key="index">
+    <dl v-for="(item, index) in data" class="box-list_item" :key="index" @click="toDetail">
       <dd class="item-pic">
         <img :src="item.pic" />
       </dd>
@@ -44,7 +44,11 @@ export default {
       default: false,
     },
   },
-  methods: {},
+  methods: {
+    toDetail() {
+      this.$emit("detail");
+    },
+  },
 };
 </script>
 
