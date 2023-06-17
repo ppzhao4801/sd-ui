@@ -6,6 +6,7 @@
         <i class="el-icon-arrow-down zpp-collapse-item_icon"></i>
       </h2>
       <!-- <ul id="bookList" class="ztree" ref="ztreeContainer"></ul> -->
+      <!-- :expand-on-click-node="false" -->
       <el-tree :data="treeData" show-checkbox default-expand-all node-key="id" ref="tree" highlight-current> </el-tree>
       <div class="more"><i class="el-icon-arrow-down zpp-collapse-item_icon"></i></div>
     </div>
@@ -86,7 +87,7 @@ export default {
       treeData: [
         {
           id: "id1",
-          label: "父节点1",
+          label: "父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点父节点",
           children: [
             { id: "id1-1", label: "子节点1" },
             { id: "id2-1", label: "子节点2" },
@@ -139,7 +140,7 @@ export default {
       const zTreeData = [
         {
           id: "id1",
-          name: "父节点1",
+          name: "父节点父节点父节点父节点父节点父节点父节点父节点",
           children: [
             { id: "id1-1", name: "子节点1" },
             { id: "id2-1", name: "子节点2" },
@@ -213,7 +214,7 @@ export default {
       }
       .content {
         width: 100%;
-        font-size: 12px;
+        font-size: 16px;
         color: #717171;
         .title {
           margin-bottom: 10px;
@@ -231,6 +232,7 @@ export default {
           }
         }
         .opt {
+          text-align: right;
           margin-top: 20px;
         }
       }
