@@ -1,6 +1,6 @@
 <template>
-  <div class="VideoList f-flex f-row-center f-col-top">
-    <div style="width: 240px">
+  <div class="paper-list f-flex f-row-center f-col-top l-width">
+    <div class="collapse">
       <Collapse></Collapse>
     </div>
     <div style="width: 1040px; text-align: right">
@@ -54,7 +54,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.VideoList {
-  margin: 0 30px;
+.paper-list {
+  .collapse {
+    flex: 1 1 240px;
+  }
 }
 </style>
