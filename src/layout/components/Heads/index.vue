@@ -10,7 +10,7 @@
             <el-option label="ISBN" value="isbn"></el-option>
             <el-option label="全文" value="yj"></el-option>
           </el-select>
-          <el-button type="danger" slot="append" icon="el-icon-search">搜索</el-button>
+          <el-button type="danger" slot="append" icon="el-icon-search" @click="toSearch">搜索</el-button>
         </el-input>
       </div>
       <div class="other">高级检索</div>
@@ -38,7 +38,11 @@ export default {
     };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    toSearch() {
+      this.$router.push({ path: "/resource/list" });
+    },
+  },
 };
 </script>
 <style lang="scss">
