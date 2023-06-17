@@ -4,11 +4,11 @@
     <el-breadcrumb separator=">">
       <transition-group name="breadcrumb">
         <template v-for="(item, index) in levelList">
-          <el-breadcrumb-item v-if="item.title" :key="item.path">
+          <el-breadcrumb-item v-if="item.meta.title" :key="item.path">
             <span v-if="index == levelList.length - 1" class="no-redirect">
-              {{ item.title }}
+              {{ item.meta.title }}
             </span>
-            <a v-else @click.prevent="handleLink(item)">{{ item.title }}</a>
+            <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
           </el-breadcrumb-item>
         </template>
       </transition-group>
@@ -18,21 +18,29 @@
 
 <script>
 export default {
-  name: "Breadcrumb",
-  props: {
-    // 容器样式
-    levelList: {
-      type: Array,
-      required: false,
-      default: function () {
-        return [];
-      },
+  name: "Breadcrumbs",
+  data() {
+    return {
+      levelList: null,
+    };
+  },
+  watch: {
+    $route() {
+      this.getBreadcrumb();
     },
   },
-  data() {
-    return {};
+  created() {
+    this.getBreadcrumb();
   },
   methods: {
+    getBreadcrumb() {
+      const matched = this.$route.matched.filter((item) => {
+        if (item.name) {
+          return true;
+        }
+      });
+      this.levelList = matched;
+    },
     pathCompile(path) {
       // To solve this problem https://github.com/PanJiaChen/vue-element-admin/issues/561
       const { params } = this.$route;
@@ -55,9 +63,6 @@ export default {
 <style lang="scss" scoped>
 .app-breadcrumb {
   font-size: 14px;
-  a:hover {
-    color: #ca0b0b;
-  }
   .pre {
     line-height: 40px;
   }
