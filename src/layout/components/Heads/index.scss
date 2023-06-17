@@ -50,6 +50,9 @@
       padding: 10px 0;
       border: 1px solid #fff;
       box-sizing: border-box;
+      &.router-link-exact-active,&:hover{
+        background: $color-7;
+      }
     }
   }
 }

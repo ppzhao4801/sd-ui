@@ -1,4 +1,6 @@
 @import './public';
+//公共资源配置
+@import './common/var.scss';
 // 动画
 @import './animate/vue-transition.scss';
 // 补丁 base
@@ -6,6 +8,7 @@
 // 在这里写公用的class
 // 注意 这个文件里只写class
 @import './common/flex.scss';
+@import './common/element.scss';
 //页面样式
 @import './page.scss';
 

@@ -1,0 +1,19 @@
+.el-pagination{
+  .el-pager{
+    .number:hover,.active{
+      color: $color-6;
+    }
+  }
+}
+.el-select-dropdown{
+  .el-select-dropdown__item.selected{
+    color:$color-6;
+  }
+}
+// .el-input{
+//   .el-input__inner{
+//     &:hover{
+//       border-color:$color-6;
+//     }
+//   }
+// }

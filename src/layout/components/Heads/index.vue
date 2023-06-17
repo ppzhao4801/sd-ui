@@ -17,10 +17,11 @@
     </div>
     <ul class="nav">
       <li>
-        <a href="#">图书库</a>
-        <a href="#">新闻库</a>
-        <a href="#">素材库</a>
-        <a href="#">视频库</a>
+        <router-link to="/">图书库</router-link>
+        <router-link to="/news/list">新闻库</router-link>
+        <router-link to="/">素材库</router-link>
+        <router-link to="/audio/list">音频库</router-link>
+        <router-link to="/video/list">视频库</router-link>
       </li>
     </ul>
   </div>
