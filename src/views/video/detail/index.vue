@@ -9,7 +9,7 @@
           <el-tabs v-model="activeName" class="side-tabs">
             <el-tab-pane label="目录" name="list">
               <div class="playlist">
-                <el-collapse>
+                <el-collapse v-model="collapseVal">
                   <el-collapse-item name="1">
                     <template slot="title">
                       <div class="title">01,一致性 Consistency一致性一致性一致性一致性一致性test</div>
@@ -335,6 +335,7 @@ export default {
   data() {
     return {
       activeName: "list",
+      collapseVal: "1",
       search: null,
       player: null,
     };
