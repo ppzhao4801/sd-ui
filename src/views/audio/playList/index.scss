@@ -1,4 +1,15 @@
 .audio-play-list {
+  .mini-audio{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 50;
+  }
   .section {
     width: 1200px;
     margin: 0 auto;

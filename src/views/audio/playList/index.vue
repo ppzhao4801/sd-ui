@@ -223,10 +223,12 @@
         </div>
       </div>
     </div>
-    <mini-audio
-      autoplay
-      audio-source="https://img.tukuppt.com/newpreview_music/08/99/03/5c88d82b94ecc80706.mp3"
-    ></mini-audio>
+    <div class="mini-audio">
+      <mini-audio
+        autoplay
+        audio-source="https://img.tukuppt.com/newpreview_music/08/99/03/5c88d82b94ecc80706.mp3"
+      ></mini-audio>
+    </div>
   </div>
 </template>
 <script>
