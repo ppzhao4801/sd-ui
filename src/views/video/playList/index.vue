@@ -1,5 +1,8 @@
 <template>
   <div class="global-background video-play-list l-width">
+    <div>
+      <Breadcrumb :levelList="levelList" />
+    </div>
     <div class="section f-flex f-col-top">
       <div class="section-left">
         <div
@@ -239,6 +242,16 @@ export default {
     return {
       search: null,
       detailTab: "list",
+      levelList: [
+        {
+          title: "视频列表",
+          path: "/video/list",
+        },
+        {
+          title: "新闻详情",
+          path: "video/play/list",
+        },
+      ],
     };
   },
   methods: {
