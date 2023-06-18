@@ -1,9 +1,9 @@
 <template>
-  <div class="VideoList f-flex f-row-center f-col-top">
-    <div style="width: 240px">
+  <div class="audio-list f-flex f-row-between f-col-top l-width">
+    <div class="collapse">
       <Collapse></Collapse>
     </div>
-    <div style="width: 1040px; text-align: right">
+    <div style="width: 960px; text-align: right">
       <BoxList :data="list" @detail="toDetail"></BoxList>
       <el-pagination
         :current-page="1"
@@ -56,9 +56,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.VideoList {
-  margin: 0 30px;
-}
-</style>

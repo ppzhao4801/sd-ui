@@ -1,5 +1,5 @@
 <template>
-  <div class="VideoList f-flex f-row-between f-col-top l-width">
+  <div class="video-list f-flex f-row-between f-col-top l-width">
     <div class="collapse">
       <Collapse></Collapse>
     </div>
@@ -56,11 +56,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.VideoList {
-  .collapse {
-    flex: 1 1 240px;
-  }
-}
-</style>

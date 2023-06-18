@@ -10,14 +10,16 @@
           <div class="item" @click="store(item)"><i></i><span class="dzs">收藏</span></div>
         </template>
       </BoxList>
-      <el-pagination
-        :current-page="1"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="400"
-      >
-      </el-pagination>
+      <div style="text-align: right">
+        <el-pagination
+          :current-page="1"
+          :page-sizes="[100, 200, 300, 400]"
+          :page-size="100"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="400"
+        >
+        </el-pagination>
+      </div>
     </div>
   </div>
 </template>
@@ -59,14 +61,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.paper-list {
-  .collapse {
-    flex: 1 1 240px;
-  }
-  .content-wrap {
-    width: 960px;
-  }
-}
-</style>
