@@ -267,7 +267,57 @@
                 </el-collapse>
               </div>
             </el-tab-pane>
-            <el-tab-pane label="视频内容" name="content">视频内容</el-tab-pane>
+            <el-tab-pane label="视频内容" name="content">
+              <div class="playContent">
+                <div class="search-bar">
+                  <el-input placeholder="请输入内容" prefix-icon="el-icon-search" size="small" v-model="search">
+                  </el-input>
+                  <el-button type="danger" size="small">检索</el-button>
+                </div>
+                <div class="docs-list">
+                  <div class="docs-part">
+                    <div class="begin-time">00:04</div>
+                    <div class="docs-part-cnt">
+                      <span class="docs-text">2016年国家十三五规划2016年国家十三五规划中提出中提出</span>
+                      <span class="comma">，</span>
+                      <span class="docs-text">以习志为核心的党中央弘扬改革创新精神中央弘扬改革创新精神</span>
+                    </div>
+                  </div>
+                  <div class="docs-part">
+                    <div class="begin-time">10:04</div>
+                    <div class="docs-part-cnt">
+                      <span class="docs-text">2016年国家十三五规划中提出</span>
+                      <span class="comma">，</span>
+                      <span class="docs-text">以习近平同志为核心的党中央弘扬改革创新精神</span>
+                    </div>
+                  </div>
+                  <div class="docs-part">
+                    <div class="begin-time">20:04</div>
+                    <div class="docs-part-cnt">
+                      <span class="docs-text">2016年国家十三五规划2016年国家十三五规划中提出中提出</span>
+                      <span class="comma">，</span>
+                      <span class="docs-text">以习志为核心的党中央弘扬改革创新精神中央弘扬改革创新精神</span>
+                    </div>
+                  </div>
+                  <div class="docs-part">
+                    <div class="begin-time">30:04</div>
+                    <div class="docs-part-cnt">
+                      <span class="docs-text">2016年国家十三五规划2016年国家十三五规划中提出中提出</span>
+                      <span class="comma">，</span>
+                      <span class="docs-text">以习志为核心的党中央弘扬改革创新精神中央弘扬改革创新精神</span>
+                    </div>
+                  </div>
+                  <div class="docs-part">
+                    <div class="begin-time">40:04</div>
+                    <div class="docs-part-cnt">
+                      <span class="docs-text">2016年国家十三五规划2016年国家十三五规划中提出中提出</span>
+                      <span class="comma">，</span>
+                      <span class="docs-text">以习志为核心的党中央弘扬改革创新精神中央弘扬改革创新精神</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </el-tab-pane>
           </el-tabs>
         </div>
       </div>
@@ -285,6 +335,7 @@ export default {
   data() {
     return {
       activeName: "list",
+      search: null,
       player: null,
     };
   },
@@ -328,6 +379,71 @@ export default {
     height: 100%;
     .el-tab-pane {
       height: 100%;
+    }
+    .playContent {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .search-bar {
+        display: flex;
+        align-items: baseline;
+        padding: 6px 24px;
+        .el-input__inner {
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+      .docs-list {
+        padding: 10px 0;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+        &::-webkit-scrollbar-thumb {
+          background-color: #323c46;
+        }
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+        .docs-part {
+          padding: 0 24px;
+          font-size: 14px;
+          line-height: 28px;
+          color: #667280;
+          margin-bottom: 24px;
+          .begin-time {
+            padding: 0 4px;
+            margin-bottom: 8px;
+            background: #323c46;
+            border-radius: 6px;
+            height: 20px;
+            line-height: 20px;
+            width: fit-content;
+            font-size: 14px;
+            color: #a1a9b2;
+          }
+          .docs-part-cnt {
+            cursor: default;
+            .docs-text {
+              padding: 5.5px 0 5.5px 4px;
+              &:first-child {
+                margin-left: -4px;
+              }
+              &:hover {
+                cursor: pointer;
+                background: rgb(202, 11, 11, 0.3);
+                border-radius: 6px;
+                color: #c0c5cc;
+              }
+            }
+            .comma {
+              margin-right: -4px;
+              padding: 5.5px 0;
+            }
+          }
+        }
+      }
     }
     .playlist {
       height: 100%;
