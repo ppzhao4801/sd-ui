@@ -12,6 +12,12 @@
     </div>
     <div class="f-flex-1">
       <div>
+        <div class="sort">
+          <el-select v-model="sort" size="mini">
+            <el-option label="正序" :value="1"> </el-option>
+            <el-option label="倒序" :value="2"> </el-option>
+          </el-select>
+        </div>
         <ul class="search-result-list">
           <li class="item">
             <div class="img">
@@ -84,6 +90,7 @@ export default {
   data() {
     return {
       list: [],
+      sort: null,
       treeData: [
         {
           id: "id1",
