@@ -52,3 +52,11 @@
     }
   }
 }
+.el-picker-panel__content{
+  .el-year-table td .cell:hover, .el-year-table td.current:not(.disabled) .cell{
+    color: $color-6;
+  }
+  .el-year-table td.today .cell{
+    color: $color-6;
+  }
+}
