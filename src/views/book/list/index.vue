@@ -190,18 +190,22 @@ export default {
       font-size: 14px;
     }
   }
-  .search-result-list {
+  ul.search-result-list {
     margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     li.item {
       display: flex;
       justify-content: flex-start;
       flex-wrap: nowrap;
       position: relative;
-      margin-bottom: 20px;
       padding: 15px;
       background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
+      border-bottom: 1px solid #ebeef5;
+      // margin-bottom: 20px;
+      // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      // border-radius: 5px;
       transition: all 0.3s;
       line-height: 1.5;
       word-break: break-all;
