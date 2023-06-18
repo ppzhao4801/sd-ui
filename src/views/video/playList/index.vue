@@ -50,6 +50,11 @@
     <div class="section-main">
       <div>
         <div class="detail">
+          <div class="detail_search">
+            <span class="label">内容</span>
+            <el-input v-model="search" size="small" />
+            <el-button type="danger" size="small">检索</el-button>
+          </div>
           <el-tabs v-model="detailTab" class="detail-tabs">
             <el-tab-pane label="课程目录" name="list">
               <el-collapse class="detail-collapse">
@@ -232,6 +237,7 @@ export default {
   computed: {},
   data() {
     return {
+      search: null,
       detailTab: "list",
     };
   },
@@ -337,11 +343,25 @@ export default {
   .section-main {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     .detail {
+      position: relative;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 3px 12px rgba(0, 36, 153, 0.06);
       width: 820px;
+      .detail_search {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 2;
+        display: flex;
+        align-items: baseline;
+        .label {
+          white-space: nowrap;
+          margin-right: 10px;
+        }
+      }
       .detail-tabs.el-tabs {
         padding: 20px;
         .el-tabs__nav-wrap::after {

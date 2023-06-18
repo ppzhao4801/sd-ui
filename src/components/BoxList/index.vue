@@ -37,6 +37,12 @@ export default {
         return {};
       },
     },
+    imgStyle: {
+      type: Object,
+      default: function () {
+        return {};
+      },
+    },
     isMark: {
       type: Boolean,
       default: false,
